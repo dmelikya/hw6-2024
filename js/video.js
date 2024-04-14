@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	playButton.addEventListener("click", function() {
 		video.play();
 		console.log(`Current video speed: ${video.playbackRate}`);
-		volumeElement.textContent = video.volume * 100;
+		volumeElement.textContent = video.volume * 100 + "%";
 	});
 
 	pauseButton.addEventListener('click', function() {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	volumeSlider.addEventListener('input', function() {
 		video.volume = volumeSlider.value / 100;
-		volumeElement.textContent = volumeSlider.value;
+		volumeElement.textContent = volumeSlider.value + "%";
 	});
 
 	oldSchool.addEventListener('click', function() {
